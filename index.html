@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/background.css?v=20260323a">
+    <title>The port-folio of Raphaël</title>
+  </head>
+  <body>
+    <main>
+      <section id="card-view" class="card-view" aria-live="polite"></section>
+    </main>
+    <nav id="card-navbar" class="card-navbar" aria-label="Navigation des pages"></nav>
+
+    <script>
+      const pages = [
+        {
+          id: "accueil",
+          label: "Accueil",
+          href: "#accueil",
+          rank: "A",
+          suit: "\u2665",
+          accent: "#63f2d6",
+          title: "Bienvenue sur mon portfolio",
+          description: "Découvre mon profil, mes compétences et ma progression en BTS SIO SLAM.",
+          bullets: [
+            "Développement web: HTML, CSS, JavaScript, PHP",
+            "Approche projet: applications web et solutions dynamiques",
+            "Curiosité technique: outils, virtualisation et conception"
+          ],
+          customHtml: `
+            <article class="card-view-box accueil-view">
+              <section class="accueil-hero" aria-label="Introduction">
+                <h1 class="card-view-title">Bienvenue sur mon portfolio</h1>
+                <h2>Étudiant en BTS SIO - option SLAM</h2>
+                <h3> TONON Raphaël </h3>
+              </section>
+              <section class="accueil-profil" aria-label="Profil personnel">
+                <h3 class="partie-title">Mon profil</h3>
+                <p class="partie-text">
+                  Je suis étudiant en BTS SIO SLAM, passionné par le développement web et la création d'applications utiles.
+                  J'aime apprendre en pratiquant, transformer une idée en solution concrète et progresser en continu.
+                </p>
+                <div class="accueil-profil-cards" aria-label="Résumé de mon profil">
+                  <section class="accueil-profil-card">
+                    <h4>2</h4>
+                    <p>Projet(s) en cour(s) de réalisation(s)</p>
+                  </section>
+                  <section class="accueil-profil-card">
+                    <h4>4</h4>
+                    <p>Projets Réalisés</p>
+                  </section>
+                  <section class="accueil-profil-card">
+                    <h4>10+</h4>
+                    <p>Technologies maîtrisées</p>
+                  </section>
+                </div>
+              </section>
+              <div class="partie-board accueil-board" aria-label="Contenu de la page d'accueil">
+                <section class="partie-card accueil-intro-card">
+                  <h3 class="partie-title">Parcours Scolaire</h3>
+                  <div class="accueil-presentation-timeline" aria-label="Parcours de formation">
+                    <article class="accueil-step">
+                      <p class="accueil-step-date">sept 2024 - Aujourd'hui</p>
+                      <span class="accueil-step-dot" aria-hidden="true"></span>
+                      <section class="accueil-step-card">
+                        <h4>BTS SIO - Option SLAM</h4>
+                        <p>BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Metiers.</p>
+                        <p>Institut Limayrac, Toulouse.</p>
+                      </section>
+                    </article>
+                    <article class="accueil-step">
+                      <p class="accueil-step-date">sept 2023 - juin 2024</p>
+                      <span class="accueil-step-dot" aria-hidden="true"></span>
+                      <section class="accueil-step-card">
+                        <h4>BAC STI2D - Option SIN</h4>
+                        <p>Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable, spécialité Systèmes d'Information et Numérique.</p>
+                        <p>Lycee Charles de Gaulle, Muret.</p>
+                      </section>
+                    </article>
+                    <article class="accueil-step">
+                      <p class="accueil-step-date">sept 2019 - juin 2023</p>
+                      <span class="accueil-step-dot" aria-hidden="true"></span>
+                      <section class="accueil-step-card">
+                        <h4>College</h4>
+                        <p>Brevet des collèges.</p>
+                        <p>Collège François Verdier, Léguvin.</p>
+                      </section>
+                    </article>
+                  </div>
+                </section>
+                <section class="partie-card accueil-competences-card">
+                  <h3 class="partie-title">Parcours Professionnel</h3>
+                  <div class="accueil-tech-timeline" aria-label="Compétences techniques détaillées">
+                    <article class="accueil-tech-step">
+                      <p class="accueil-tech-date">janv 2026 - févr 2026</p>
+                      <span class="accueil-tech-dot" aria-hidden="true"></span>
+                      <section class="accueil-tech-card">
+                        <h4>Stage 2ème année BTS SIO SLAM</h4>
+                        <p>Stage chez iRessources : conception et programmation d’une machine à dessin avec Arduino en C++, ainsi que développement et amélioration d’un bot Telegram en Node.js.</p>
+                      </section>
+                    </article>
+                    <article class="accueil-tech-step">
+                      <p class="accueil-tech-date">mai 2025 - juillet 2025</p>
+                      <span class="accueil-tech-dot" aria-hidden="true"></span>
+                      <section class="accueil-tech-card">
+                        <h4>Stage 1ère année BTS SIO SLAM</h4>
+                        <p>Développement d’une page web permettant de récupérer et stocker des données issues de mails dans une base SQL, puis création d’un graphique interactif avec filtres et API météo, tout en améliorant l’interface utilisateur (HTML, CSS, JavaScript, PHP).</p>
+                      </section>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </article>
+          `
+        },
+        {
+          id: "competences",
+          label: "Compétences",
+          href: "#competences",
+          rank: "C",
+          suit: "\u2666",
+          accent: "#56c0ff",
+          title: "Tableau de compétences",
+          description: "Synthèse de mes compétences BTS SIO SLAM et suivi de progression.",
+          bullets: [
+            "Structurer un projet et documenter les réalisations",
+            "Concevoir des interfaces et des logiques applicatives",
+            "Maintenir une base de code claire et évolutive",
+            "Tableau de suivi des compétences BTS SIO."
+          ],
+          customHtml: `
+            <article class="card-view-box competences-view">
+              <section class="competences-tech" aria-label="Technologies maîtrisées">
+                <h1>Compétences</h1>
+                <h2 class="competences-tech-title" >&lt;/&gt; Développement Web & App</h2>
+                <div class="competences-tech-grid">
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/html5.svg" alt="Logo HTML5">
+                    <span class="tech-name">HTML5</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/css3.svg" alt="Logo CSS3">
+                    <span class="tech-name">CSS3</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/javascript.svg" alt="Logo JavaScript">
+                    <span class="tech-name">JavaScript</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/php-elephant.png" alt="Logo PHP style éléphant">
+                    <span class="tech-name">PHP</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/java.svg" alt="Logo Java">
+                    <span class="tech-name">Java</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/python.svg" alt="Logo Python">
+                    <span class="tech-name">Python</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/cplusplus.svg" alt="Logo C++">
+                    <span class="tech-name">C++</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/mysql.svg" alt="Logo SQL (MySQL)">
+                    <span class="tech-name">SQL</span>
+                  </div>
+                  <div class="tech-card">
+                    <img class="tech-icon-svg" src="img/nodejs.svg" alt="Logo Node.js">
+                    <span class="tech-name">Node.js</span>
+                  </div>
+                </div>
+              </section>
+
+              <div class="partie-board" aria-label="Résumé des compétences">
+                <section class="partie-card frameworks-card">
+                  <h3 class="partie-title frameworks-title">Frameworks & Bibliothèques</h3>
+                  <div class="competences-tech-grid frameworks-grid">
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/chartjs.svg" alt="Logo Chart.js">
+                      <span class="tech-name">Chart.js</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/imap.svg" alt="Logo IMAP">
+                      <span class="tech-name">IMAP</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/curl.svg" alt="Logo cURL">
+                      <span class="tech-name">cURL</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/arduino.svg" alt="Logo Arduino">
+                      <span class="tech-name">Arduino.h</span>
+                    </div>
+                  </div>
+                </section>
+                <section class="partie-card tools-card">
+                  <h3 class="partie-title frameworks-title"><span class="frameworks-title-icon" aria-hidden="true">🛠</span> Outils & Environnement</h3>
+                  <div class="competences-tech-grid tools-grid">
+                    <div class="tech-card">
+                      <span class="tech-icon-pair" aria-hidden="true">
+                        <img class="tech-icon-svg" src="img/git.svg" alt=""> / 
+                        <img class="tech-icon-svg" src="img/github.svg" alt="">
+                      </span>
+                      <span class="tech-name">Git & GitHub</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/vscode.svg" alt="Logo VS Code">
+                      <span class="tech-name">VS Code</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/wireshark.svg" alt="Logo Wireshark">
+                      <span class="tech-name">Wireshark</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/looping.svg" alt="Logo Looping">
+                      <span class="tech-name">Looping</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/virtualbox.svg" alt="Logo VirtualBox">
+                      <span class="tech-name">VirtualBox</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/glpi.svg" alt="Logo GLPI">
+                      <span class="tech-name">GLPI</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/arduino.svg" alt="Logo Arduino">
+                      <span class="tech-name">Arduino</span>
+                    </div>
+                    <div class="tech-card">
+                      <img class="tech-icon-svg" src="img/ScratchCat.png" alt="Logo Scratch2">
+                      <span class="tech-name">Scratch2</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <section class="partie-card" aria-label="Tableau de suivi des compétences">
+                <h3 class="partie-title">Tableau de Compétences</h3>
+                <p class="partie-text">Vous trouverez ci-dessous un tableau détaillant mes compétences acquises en BTS SIO.</p>
+                <iframe
+                  src="docs/E5 2026 - Tableau des compétences.pdf"
+                  width="100%"
+                  height="500px"
+                ></iframe>
+              </section>
+            </article>
+          `
+        },
+        {
+          id: "patrimoine-informatique",
+          label: "Patrimoine",
+          href: "#patrimoine-informatique",
+          rank: "P",
+          suit: "\u2663",
+          accent: "#7cd9ff",
+          title: "Patrimoine informatique",
+          description: "Le patrimoine informatique désigne l’intégralité des ressources matérielles, logicielles et documentaires d’une organisation. Son inventaire régulier, sa maintenance proactive et son évolution stratégique sont indispensables pour assurer la fiabilité, la performance et la pérennité du système d’information.",
+          bullets: [
+            "J'ai appris a mettre cela en place avec l'aide d'un TP GLPI vu en classe",
+            "Mise en pratique de l'inventaire, du suivi et de la maintenance des ressources informatiques."
+          ],
+          customHtml: `
+            <article class="card-view-box competences-view patrimoine-view">
+              <section class="competences-tech" aria-label="Patrimoine informatique">
+                <h1>Patrimoine informatique</h1>
+                <h2 class="competences-tech-title">Définition</h2>
+                <p class="partie-text">Le patrimoine informatique désigne l'ensemble des ressources liées au système d'information d'une organisation. Il comprend les équipements matériels, les logiciels, les bases de données et les contenus numériques.</p>
+              </section>
+              <div class="partie-board" aria-label="Synthèse du patrimoine informatique">
+                <section class="partie-card frameworks-card">
+                  
+
+
+                </section>
+                <section class="partie-card tools-card">
+                  <h3 class="partie-title frameworks-title"><span class="frameworks-title-icon" aria-hidden="true">🛠</span> Ressources logicielles et matérielles</h3>
+                  <p class="partie-text"> - Les postes de travail, serveurs, imprimantes et équipements réseau font l’objet d’une gestion rigoureuse, incluant leur inventaire, le suivi de leur état, leur affectation ainsi que leur cycle de vie. Cet environnement a été simulé dans le cadre d’un travail pratique réalisé en classe, à l’aide de plusieurs machines virtuelles (VM) et administré via l’outil GLPI. <br> - Par ailleurs, les systèmes, applications, licences et documentations sont également pris en compte, avec une attention particulière portée à leur conformité, au suivi des versions et à leur maintenance, afin de garantir la fiabilité et la pérennité du système d’information.</p>
+                </section>
+              </div>
+
+              <section class="partie-card" aria-label="Mise en pratique en formation">
+                <h3 class="partie-title">Mise en pratique</h3>
+                - Lors d’un autre travail pratique réalisé en classe, j’ai travaillé sur la récupération d’informations des postes à l’aide de l’outil GLPI. <br> - Cette activité avait pour objectif de mieux me faire comprendre le fonctionnement d’un système de gestion de parc informatique au sein d’un environnement pédagogique.
+              </section>
+              <div class="partie-board" aria-label="Synthèse du patrimoine informatique">
+                <section class="partie-card frameworks-card">
+                 <h3 class="partie-title frameworks-title"><span class="frameworks-title-icon" aria-hidden="true">🛠</span> Ressources logicielles et matérielles</h3>
+                  <p class="partie-text">Ressources logicielles :</p>
+                  <ul class="card-view-list">
+                    <li>Le logiciel GLPI, utilisé pour la gestion du parc informatique et la récupération des informations des postes</li>
+                    <li>Éventuellement un agent GLPI installé sur les machines pour remonter les données</li>
+                    <li>Un système d’exploitation (Windows ou Linux) sur les postes et le serveur</li>
+                    <li>Un navigateur web pour accéder à l’interface de GLPI</li>
+                  </ul>
+                  <p class="partie-text">Ressources matérielles :</p>
+                  <ul class="card-view-list">
+                    <li>Des postes informatiques (clients) sur lesquels les informations sont récupérées</li>
+                    <li>Un serveur hébergeant GLPI (physique ou machine virtuelle)</li>
+                    <li>Un réseau permettant la communication entre les machines et le serveur</li>
+                    <li>Éventuellement un ordinateur personnel pour administrer et tester l’outil</li>
+                  </ul>
+
+                </section>
+                <section class="partie-card tools-card">
+                  
+
+
+                </section>
+              </div>
+            </article>
+          `
+        },
+        {
+          id: "support-utilisateur",
+          label: "Support",
+          href: "#support-utilisateur",
+          rank: "S",
+          suit: "\u2663",
+          accent: "#ff8f9f",
+          title: "Support d'utilisateur",
+          description: "Traiter les incidents et les demandes d’assistance ou d’évolution, c’est garantir la continuité et l’efficacité du système informatique : en résolvant rapidement les problèmes des utilisateurs et en intégrant leurs besoins d’amélioration, on optimise leur expérience et la performance globale du SI.",
+          bullets: [
+            "Pendant mon stage chez Captusite, j'ai eu une demande d'évolution constante sur la page web que j'ai codée."
+          ]
+        },
+        {
+          id: "presence-en-ligne",
+          label: "Présence",
+          href: "#presence-en-ligne",
+          rank: "L",
+          suit: "\u2666",
+          accent: "#6fd6ff",
+          title: "Présence en ligne",
+          description: "Renforcer la présence en ligne d’une organisation, c’est créer, administrer et optimiser ses supports digitaux (site web, réseaux sociaux, applications, etc.) pour accroître sa visibilité, son accessibilité et son impact sur Internet.",
+          bullets: [
+            "J'ai appris a faire cela avec un des projets fais en classe se nommant M2L. Je me suis occupé pour ma part de la partie ligue de rugby car le but du projet était de faire un site regroupant plusieur ligue de sport."
+          ]
+        },
+        {
+          id: "mode-projet",
+          label: "Mode projet",
+          href: "#mode-projet",
+          rank: "M",
+          suit: "\u2663",
+          accent: "#7ee7c5",
+          title: "Mode projet",
+          description: "Le mode projet consiste à organiser une équipe autour d’un objectif précis, avec des contraintes définies : un calendrier strict, des ressources limitées (temps, budget, outils, compétences) et une approche collaborative pour atteindre les résultats attendus.",
+          bullets: [
+            "Pour cette compétence j'ai eu un deuxième projet se nommant aussi M2L mais je devais travailler en équipe avec une deuxième personne."
+          ]
+        },
+        {
+          id: "service-informatique",
+          label: "Service",
+          href: "#service-informatique",
+          rank: "I",
+          suit: "\u2665",
+          accent: "#58c4ff",
+          title: "Service informatique",
+          description: "Mettre en place et maintenir des services numériques, c’est concevoir, déployer et garantir le bon fonctionnement des éléments clés d’une infrastructure digitale : sites web, services de sauvegarde, hébergement, gestion des noms de domaine, sécurisation des accès et optimisation des réseaux. Cette démarche vise à assurer la disponibilité, la sécurité et la performance des outils en ligne, afin de répondre efficacement aux besoins des utilisateurs et de soutenir les activités de l’organisation.",
+          bullets: [
+            "J'appris a développer en en étant a l'écoute de mon tuteur pour faire l'évolution du site qui ma demande."
+          ]
+        },
+        {
+          id: "developpement-professionnelle",
+          label: "Dev pro",
+          href: "#developpement-professionnelle",
+          rank: "D",
+          suit: "\u2665",
+          accent: "#ffb089",
+          title: "Développement professionnel",
+          description: "Déployer une veille informationnelle active (outils et stratégies adaptés), construire et valoriser son identité professionnelle, et élaborer un projet professionnel cohérent et évolutif : trois leviers essentiels pour anticiper les tendances, se positionner sur le marché et piloter sa carrière avec pertinence.",
+          bullets: [
+            "Cette compétence me permet de me renseigner sur les prochaines nouveautés de l'industrie informatique."
+          ]
+        }
+      ];
+
+      const nav = document.getElementById("card-navbar");
+      const cardView = document.getElementById("card-view");
+      const pageById = new Map();
+
+      function renderView(page) {
+        if (page.customHtml) {
+          cardView.innerHTML = page.customHtml;
+          return;
+        }
+
+        cardView.innerHTML = `
+          <article class="card-view-box">
+            <h2 class="card-view-title">${page.title}</h2>
+            <p class="card-view-description">${page.description}</p>
+            <ul class="card-view-list">
+              ${page.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
+            </ul>
+            ${page.embedUrl ? `<iframe class="card-view-embed" src="${page.embedUrl}" loading="lazy" title="${page.title}"></iframe>` : ""}
+          </article>
+        `;
+      }
+
+      pages.forEach((page) => {
+        pageById.set(page.id, page);
+
+        const previewTitle = page.title.length > 26 ? `${page.title.slice(0, 26)}...` : page.title;
+        const previewSource = page.description || (page.bullets && page.bullets.length > 0 ? page.bullets[0] : "");
+        const previewText = previewSource.length > 82 ? `${previewSource.slice(0, 82)}...` : previewSource;
+
+        const link = document.createElement("a");
+        link.href = page.href;
+        link.className = "card-nav-item";
+        link.dataset.pageId = page.id;
+        if (page.accent) {
+          link.style.setProperty("--card-accent", page.accent);
+        }
+        link.innerHTML = `
+          <span class="card-nav-corner" aria-hidden="true">
+            <span class="card-nav-rank">${page.rank}</span>
+            <span class="card-nav-suit">${page.suit}</span>
+          </span>
+          <span class="card-nav-label">${page.label}</span>
+          <span class="card-nav-mini" aria-hidden="true">
+            <span class="card-nav-mini-chip">${page.label}</span>
+            <span class="card-nav-mini-title">${previewTitle}</span>
+            <span class="card-nav-mini-text">${previewText}</span>
+          </span>
+          <span class="card-nav-corner card-nav-corner-bottom" aria-hidden="true">
+            <span class="card-nav-rank">${page.rank}</span>
+            <span class="card-nav-suit">${page.suit}</span>
+          </span>
+        `;
+
+        if (page.id === "accueil") {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page");
+        }
+
+        nav.appendChild(link);
+      });
+
+      nav.addEventListener("click", (event) => {
+        const clickedCard = event.target.closest(".card-nav-item");
+        if (!clickedCard) {
+          return;
+        }
+
+        const targetId = clickedCard.dataset.pageId;
+        const targetPage = pageById.get(targetId);
+        if (!targetPage) {
+          return;
+        }
+
+        event.preventDefault();
+        clickedCard.classList.add("launch-pop");
+
+        window.setTimeout(() => {
+          clickedCard.classList.remove("launch-pop");
+          renderView(targetPage);
+
+          const cards = nav.querySelectorAll(".card-nav-item");
+          cards.forEach((card) => {
+            const isActive = card === clickedCard;
+            card.classList.toggle("active", isActive);
+            if (isActive) {
+              card.setAttribute("aria-current", "page");
+            } else {
+              card.removeAttribute("aria-current");
+            }
+          });
+        }, 190);
+      });
+
+      renderView(pages[0]);
+    </script>
+  </body>
+</html>

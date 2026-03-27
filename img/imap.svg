@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="IMAP logo">
+  <rect x="8" y="10" width="112" height="108" rx="18" fill="#0f2738"/>
+  <rect x="22" y="30" width="84" height="52" rx="8" fill="#1f4b67"/>
+  <path d="M22 40 L64 68 L106 40" fill="none" stroke="#63f2d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#dff5ff">IMAP</text>
+</svg>

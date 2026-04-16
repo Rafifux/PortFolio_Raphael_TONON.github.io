@@ -816,21 +816,27 @@ main {
 			position: absolute;
 			left: 0;
 			right: 0;
-			top: 34px;
-			display: flex;
+			top: 14px;
+			display: -webkit-box;
 			justify-content: center;
-			padding: 0 20px;
+			align-items: flex-start;
+			padding: 0 14px;
 			text-align: center;
 			font-weight: 700;
 			letter-spacing: 0.25px;
-			font-size: 0.9rem;
+			font-size: 0.75rem;
+			line-height: 1.15;
 			color: #e7f8ff;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 		.card-nav-mini {
 			position: absolute;
 			left: 12px;
 			right: 12px;
-			top: 60px;
+			top: 66px;
 			bottom: 34px;
 			display: flex;
 			flex-direction: column;
@@ -1049,14 +1055,19 @@ main {
 				margin-left: -60px;
 			}
 			.card-nav-label {
-				top: 30px;
-				font-size: 0.82rem;
+				top: 16px;
+				font-size: 0.7rem;
+				line-height: 1.15;
 				padding: 0 16px;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
 			}
 			.card-nav-mini {
 				left: 10px;
 				right: 10px;
-				top: 52px;
+				top: 58px;
 				bottom: 30px;
 				padding: 6px 7px;
 				.card-nav-mini-chip {

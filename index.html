@@ -315,7 +315,7 @@
           id: "support-utilisateur",
           label: "Répondre aux incidents et aux demandes d’assistance et d’évolution",
           href: "#support-utilisateur",
-          rank: "S",
+          rank: "R",
           suit: "\u2663",
           accent: "#ff8f9f",
           title: "Répondre aux incidents et aux demandes d’assistance et d’évolution",
@@ -360,47 +360,59 @@
         },
         {
           id: "presence-en-ligne",
-          label: "Présence",
+          label: "Développer la présence en ligne de l’organisation",
           href: "#presence-en-ligne",
-          rank: "L",
+          rank: "D",
           suit: "\u2666",
           accent: "#6fd6ff",
-          title: "Présence en ligne",
+          title: "Développer la présence en ligne de l’organisation",
           description: "Renforcer la présence en ligne d’une organisation, c’est créer, administrer et optimiser ses supports digitaux (site web, réseaux sociaux, applications, etc.) pour accroître sa visibilité, son accessibilité et son impact sur Internet.",
           bullets: [
             "J'ai appris a faire cela avec un des projets fais en classe se nommant M2L. Je me suis occupé pour ma part de la partie ligue de rugby car le but du projet était de faire un site regroupant plusieur ligue de sport."
           ],
           customHtml: `
             <article class="card-view-box competences-view presence-view">
-              <section class="competences-tech" aria-label="Présence en ligne">
-                <h1>Présence en ligne</h1>
+              <section class="competences-tech" aria-label="Développer la présence en ligne de l’organisation">
+                <h1>Développer la présence en ligne de l’organisation</h1>
                 <h2 class="competences-tech-title">Définition</h2>
                 <p class="partie-text">
-                  Renforcer la présence en ligne d’une organisation, c’est créer, administrer et optimiser ses supports digitaux (site web, réseaux sociaux, applications, etc.) pour accroître sa visibilité, son accessibilité et son impact sur Internet.
+                  Développer la présence en ligne de l’organisation consiste à mettre en place, gérer et améliorer les outils numériques (site web, applications, réseaux, services en ligne) afin d’assurer la visibilité de l’organisation sur Internet et de renforcer son interaction avec les utilisateurs.
                 </p>
               </section>
 
               <!-- Nouvelle forme : Bloc texte en pleine largeur au lieu d'une colonne -->
-              <section class="partie-card">
+              <section class="partie-card" style="margin: 0;">
                 <h3 class="partie-title frameworks-title"><span aria-hidden="true">&#127760;</span> Mon cas pratique (Projet Maison des Ligues - M2L)</h3>
                 <p class="partie-text" style="font-style: italic; margin-bottom: 12px; color: var(--page-accent);">
-                  « Création d'un site web regroupant plusieurs ligues de sport (Focus Rugby). »
+                  « Développement d'un site web vitrine responsive présentant la M2L et ses fédérations associées (Judo, Natation, Rugby). »
                 </p>
                 <ul class="card-view-list">
-                  <li><strong>Conception Web :</strong> Développement de la structure globale du site M2L pour centraliser les informations de toutes les ligues.</li>
-                  <li><strong>Spécialisation :</strong> Prise en charge intégrale de la rubrique "Ligue de Rugby" (intégration du contenu, images, code HTML/CSS).</li>
-                  <li><strong>Visibilité :</strong> Optimisation de la mise en page pour rendre l'information accessible et attractive pour les utilisateurs et les sportifs.</li>
-                  <li><strong>Travail d'équipe :</strong> Collaboration pour assurer la cohérence graphique entre les différentes ligues sportives créées par les autres membres du groupe.</li>
+                  <li><strong>Structure Globale :</strong> Création d'une page d'accueil détaillant précisément la mission, le financement et les services de la Maison des Ligues de Lorraine.</li>
+                  <li><strong>Pages Intégrées (Sports) :</strong> Intégration de sections complètes pour les ligues de Judo, Natation et Rugby avec détails sur l'historique, les règles, les catégories et les plannings.</li>
+                  <li><strong>Interface Responsive :</strong> Programmation HTML/CSS/JS d'un menu latéral animé et mise en place de l'adaptation mobile (Media Queries).</li>
+                  <li><strong>Cohérence Visuelle :</strong> Harmonisation du design et conception d'une navigation centrale fluide pour rendre l'information facilement accessible aux sportifs.</li>
                 </ul>
               </section>
 
               <!-- Nouvelle forme : Deux images côte à côte (50/50) au lieu du texte + image -->
               <div class="partie-board" aria-label="Galerie M2L">
-                <section class="partie-card" style="padding: 0; overflow: hidden; display: flex; cursor: pointer; height: 100%;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
-                  <img src="img/Placeholder_M2L_1.png" alt="Aperçu M2L 1 (À remplacer)" style="width: 100%; height: 260px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <section class="partie-card" style="padding: 0; overflow: hidden; position: relative; cursor: pointer; min-height: 260px; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" onclick="window.open('docs/Projets%20M2L/Index.html', '_blank')">
+                  
+                  <!-- Iframe miniaturisée du projet M2L (zoom dézoomé) -->
+                  <div style="position: absolute; top: 0; left: 0; width: 300%; height: 300%; transform: scale(0.3333); transform-origin: top left; z-index: 0; pointer-events: none;">
+                    <iframe src="docs/Projets%20M2L/Index.html" style="width: 100%; height: 100%; border: none; overflow: hidden;" scrolling="no" tabindex="-1"></iframe>
+                  </div>
+                  
+                  <!-- Overlay dégradé noir pour assurer la lisibilité du texte -->
+                  <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%); padding: 30px 15px 15px 15px; box-sizing: border-box; z-index: 1;">
+                    <h3 class="partie-title frameworks-title" style="margin: 0; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);"><span aria-hidden="true">&#127760;</span> Projet M2L</h3>
+                    <p style="margin: 6px 0 0 0; color: var(--page-accent); font-weight: bold; font-size: 0.9rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                      Ouvrir le projet ➔
+                    </p>
+                  </div>
                 </section>
-                <section class="partie-card" style="padding: 0; overflow: hidden; display: flex; cursor: pointer; height: 100%;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
-                  <img src="img/Placeholder_M2L_2.png" alt="Aperçu M2L 2 (À remplacer)" style="width: 100%; height: 260px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <section class="partie-card" style="padding: 0; overflow: hidden; display: flex; cursor: pointer; min-height: 260px;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                  <img src="img/Accuiel%20rugby.png" alt="Aperçu Accueil Rugby" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                 </section>
               </div>
             </article>
@@ -414,42 +426,195 @@
           suit: "\u2663",
           accent: "#7ee7c5",
           title: "Mode projet",
-          description: "Le mode projet consiste à organiser une équipe autour d’un objectif précis, avec des contraintes définies : un calendrier strict, des ressources limitées (temps, budget, outils, compétences) et une approche collaborative pour atteindre les résultats attendus.",
+          description: "La compétence mode projet désigne la capacité à organiser, planifier et réaliser un projet informatique en respectant les besoins, les délais et les méthodes de travail (souvent en équipe). Elle implique aussi de suivre toutes les étapes du projet, de l’analyse jusqu’à la livraison finale.",
           bullets: [
             "Pour cette compétence j'ai eu un deuxième projet se nommant aussi M2L mais je devais travailler en équipe avec une deuxième personne."
-          ]
+          ],
+          customHtml: `
+            <article class="card-view-box competences-view mode-projet-view">
+              <section class="competences-tech" aria-label="Mode projet">
+                <h1>Mode projet</h1>
+                <h2 class="competences-tech-title">Définition</h2>
+                <p class="partie-text">
+                  La compétence mode projet désigne la capacité à organiser, planifier et réaliser un projet informatique en respectant les besoins, les délais et les méthodes de travail (souvent en équipe). Elle implique aussi de suivre toutes les étapes du projet, de l’analyse jusqu’à la livraison finale.
+                </p>
+              </section>
+
+              <!-- Nouvelle forme : Structure asymétrique 1/3 - 2/3 avec mini-cartes internes -->
+              <section class="partie-card frameworks-card" style="margin: 0;">
+                <h3 class="partie-title frameworks-title"><span aria-hidden="true">&#128101;</span> Travail Collaboratif (Projet M2L-AppFAQ)</h3>
+                <p class="partie-text" style="font-style: italic; margin-bottom: 12px; color: var(--page-accent);">
+                  « Conception et développement d'une FAQ interactive multi-ligues en binôme. »
+                </p>
+                <p class="partie-text">
+                  Le projet <strong>AppFAQ (M2L)</strong> est une plateforme de Foire Aux Questions dynamique en PHP/SQL. Il permet aux membres de différentes ligues sportives de s'entraider via un système de questions/réponses. Le projet comprend une authentification sécurisée, la distinction des rôles (visiteurs, inscrits, administrateurs) et un espace de gestion complet. Il a nécessité une rigoureuse synchronisation en équipe pour concevoir l'interface, la base de données et fusionner nos codes sans conflits.
+                </p>
+              </section>
+
+              <!-- Grille asymétrique (Flex responsive) -->
+              <div style="display: flex; flex-wrap: wrap; gap: 18px; margin-top: 18px;">
+                
+                <!-- Colonne 1 : Trello AppFAQ (1/3 de la largeur) -->
+                <section class="partie-card" style="flex: 1; min-width: 240px; margin: 0; padding: 0; overflow: hidden; display: flex; cursor: pointer; min-height: 180px;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                  <img src="img/Trello,AppFAQ.png" alt="Tableau Trello AppFAQ" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                </section>
+
+                <!-- Colonne 2 : Répartition (2/3 de la largeur) avec des 'sous-cartes' internes -->
+                <section class="partie-card" style="flex: 2; min-width: 320px; margin: 0; background: linear-gradient(160deg, rgba(20, 50, 70, 0.95), rgba(15, 60, 80, 0.93)); display: flex; flex-direction: column;">
+                  <h3 class="partie-title"><span aria-hidden="true">&#128187;</span> Répartition des missions</h3>
+                  <div style="display: flex; gap: 12px; margin-top: auto; flex-wrap: wrap;">
+                    
+                    <div style="flex: 1; min-width: 140px; background: rgba(0,0,0,0.25); padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                      <h4 style="margin: 0 0 6px; color: #fff; font-size: 0.95rem;">Mon Binôme</h4>
+                      <p class="partie-text" style="font-size: 0.85rem; line-height: 1.4;">Elle a assuré une grande partie du développement dynamique du projet, tout en réalisant également l’intégralité de son design.</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 140px; background: rgba(126, 231, 197, 0.15); padding: 14px; border-radius: 8px; border: 1px solid rgba(126, 231, 197, 0.3);">
+                      <h4 style="margin: 0 0 6px; color: #7ee7c5; font-size: 0.95rem;">Moi-même</h4>
+                      <p class="partie-text" style="font-size: 0.85rem; line-height: 1.4;">J’ai pris en charge la conception complète de la structure du projet, ainsi que la création et l’intégration de la base de données, en assurant les interactions entre le système web et la BDD.</p>
+                    </div>
+
+                  </div>
+                </section>
+              </div>
+            </article>
+          `
         },
         {
-          id: "service-informatique",
-          label: "Service",
-          href: "#service-informatique",
-          rank: "I",
+          id: "Mettre à disposition des utilisateurs un service informatique",
+          label: "Mettre à disposition des utilisateurs un service informatique",
+          href: "#Mettre à disposition des utilisateurs un service informatique",
+          rank: "M",
           suit: "\u2665",
           accent: "#58c4ff",
-          title: "Service informatique",
+          title: "Mettre à disposition des utilisateurs un service informatique",
           description: "Mettre en place et maintenir des services numériques, c’est concevoir, déployer et garantir le bon fonctionnement des éléments clés d’une infrastructure digitale : sites web, services de sauvegarde, hébergement, gestion des noms de domaine, sécurisation des accès et optimisation des réseaux. Cette démarche vise à assurer la disponibilité, la sécurité et la performance des outils en ligne, afin de répondre efficacement aux besoins des utilisateurs et de soutenir les activités de l’organisation.",
           bullets: [
             "J'appris a développer en en étant a l'écoute de mon tuteur pour faire l'évolution du site qui ma demande."
-          ]
+          ],
+          customHtml: `
+            <article class="card-view-box competences-view service-view">
+              <section class="competences-tech" aria-label="Service informatique">
+                <h1>Mettre à disposition des utilisateurs un service informatique</h1>
+                <h2 class="competences-tech-title">Accessibilité & Opérabilité</h2>
+                <p class="partie-text">
+                  Mettre à disposition des utilisateurs un service informatique consiste à déployer, configurer et rendre accessible une solution informatique (application, service réseau ou système) afin de répondre aux besoins des utilisateurs. Cela inclut également la vérification de son bon fonctionnement, l’accompagnement des utilisateurs ainsi que le maintien en conditions opérationnelles du service.
+                </p>
+              </section>
+
+              <!-- Structure asymétrique inversée (2/3 images à gauche, 1/3 texte à droite) -->
+              <div style="display: flex; flex-wrap: wrap; gap: 18px; margin-top: 18px;">
+                
+                <!-- Colonne 1 : Galerie photos principale (2/3 de la largeur) -->
+                <div style="display: flex; flex-direction: column; gap: 18px; flex: 2; min-width: 320px;">
+                  <section class="partie-card tools-card" style="margin: 0; padding: 0; overflow: hidden; display: flex; flex: 1; cursor: pointer; min-height: 320px;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                    <img src="img/band%20de%20teste.png" alt="Capture d'écran - Band de teste" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  </section>
+                  <section class="partie-card tools-card" style="margin: 0; padding: 0; overflow: hidden; display: flex; flex: 1; cursor: pointer; min-height: 320px;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                    <img src="img/Capture.readme.png" alt="Capture d'écran - Readme" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  </section>
+                </div>
+
+                <!-- Colonne 2 : Description (1/3 de la largeur) -->
+                <section class="partie-card" style="flex: 1; min-width: 240px; margin: 0; background: linear-gradient(160deg, rgba(88, 196, 255, 0.08), rgba(88, 196, 255, 0.03)); display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <h3 class="partie-title frameworks-title"><span aria-hidden="true">&#128679;</span> Mise en œuvre</h3>
+                    <p class="partie-text" style="font-style: italic; margin-bottom: 12px; color: var(--page-accent); font-size: 0.9rem;">
+                      « Rendre opérationnel et accessible un service pour les utilisateurs »
+                    </p>
+                    <p class="partie-text" style="font-size: 0.9rem; line-height: 1.5;">
+                      Déployer un service informatique nécessite d'assurer son accessibilité et son fonctionnement optimal. J'ai appris à collaborer avec mon tuteur pour configurer correctement le service, en veillant à la satisfaction des utilisateurs et à la stabilité du système.
+                    </p>
+                    
+                    <!-- Résumés des images -->
+                    <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1);">
+                      <p style="font-size: 0.85rem; line-height: 1.4; color: rgba(255,255,255,0.85); margin: 0 0 8px 0;">
+                        <strong style="color: var(--page-accent);">📊 Image 1 :</strong> Tableau complet des défauts trouvés et corrigés lors des 9 lots de développement, avec ID bugs, sévérité, causes et résolutions.
+                      </p>
+                      <p style="font-size: 0.85rem; line-height: 1.4; color: rgba(255,255,255,0.85); margin: 0;">
+                        <strong style="color: var(--page-accent);">📋 Image 2 :</strong> Guide de déploiement et d'utilisation client contenant la table des matières, prérequis serveur, configuration, maintenance et checklist de mise en production.
+                      </p>
+                    </div>
+                  </div>
+                  <ul class="card-view-list" style="margin-top: 12px; font-size: 0.9rem;">
+                    <li><strong>Accessibilité :</strong> Disponibilité pour les utilisateurs</li>
+                    <li><strong>Fonctionnalité :</strong> Service opérationnel</li>
+                    <li><strong>Support :</strong> Assistance utilisateurs</li>
+                  </ul>
+                </section>
+              </div>
+            </article>
+          `
         },
         {
-          id: "developpement-professionnelle",
+          id: "Organiser son développement professionnel",
           label: "Dev pro",
-          href: "#developpement-professionnelle",
+          href: "#Organiser son développement professionnel",
           rank: "D",
           suit: "\u2665",
           accent: "#ffb089",
-          title: "Développement professionnel",
-          description: "Déployer une veille informationnelle active (outils et stratégies adaptés), construire et valoriser son identité professionnelle, et élaborer un projet professionnel cohérent et évolutif : trois leviers essentiels pour anticiper les tendances, se positionner sur le marché et piloter sa carrière avec pertinence.",
+          title: "Organiser son développement professionnel",
+          description: "Déployer une veille informationnelle active (outils et stratégies adaptés), construire et valoriser son identité professionnelle, et élaborer un projet professionnel cohérent et évolutif.",
           bullets: [
             "Cette compétence me permet de me renseigner sur les prochaines nouveautés de l'industrie informatique."
-          ]
+          ],
+          customHtml: `
+            <article class="card-view-box competences-view devpro-view">
+              <section class="competences-tech" aria-label="Développement professionnel">
+                <h1>Organiser son développement professionnel</h1>
+                <h2 class="competences-tech-title">Définition</h2>
+                <p class="partie-text">
+                  Organiser son développement professionnel consiste à développer et maintenir ses compétences techniques et professionnelles en effectuant une veille technologique, en se formant sur de nouveaux outils et langages, et en s’adaptant aux évolutions du domaine informatique. Cela implique également de savoir gérer son apprentissage, ses projets et son évolution professionnelle afin de rester compétent dans le secteur du numérique.
+                </p>
+              </section>
+
+              <!-- Structure asymétrique inversée (images à gauche, texte à droite) -->
+              <div style="display: flex; flex-wrap: wrap; gap: 18px; margin-top: 18px; flex-direction: row-reverse;">
+                
+                <!-- Colonne 1 : Explications (1/3 de la largeur) -->
+                <section class="partie-card tools-card" style="flex: 1; min-width: 240px; margin: 0; display: flex; flex-direction: column;">
+                  <h3 class="partie-title frameworks-title"><span aria-hidden="true">&#128221;</span>Veille et perspective</h3>
+                  <p class="partie-text" style="font-style: italic; margin-bottom: 12px; color: var(--page-accent);">
+                    « Rester informé des nouveautés de l'industrie informatique. »
+                  </p>
+                  <ul class="card-view-list" style="margin-top: 8px;">
+                    <li><strong>Sources :</strong> Médias tech, blogs.</li>
+                    <li><strong>Objectif :</strong> Anticiper les technos.</li>
+                    <li><strong>Application :</strong> Tests et labos perso.</li>
+                  </ul>
+                </section>
+
+                <!-- Colonne 2 : Emplacement photos (2/3 de la largeur) avec disposition 1 grande à gauche, 2 petites empilées à droite -->
+                <section class="partie-card" style="flex: 2; min-width: 320px; margin: 0; padding: 0px; background: rgba(0,0,0,0.15); display: flex;">
+                  <!-- Photo 1 - Grande à gauche -->
+                  <div style="flex: 2; background: rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center; border-right: 1px solid rgba(255,255,255,0.1); cursor: pointer; min-height: 200px; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                    <img src="img/W3School%20preuve.png" alt="W3School - Preuve de veille" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  </div>
+                  <!-- Photos 2 & 3 - Empilées à droite -->
+                  <div style="display: flex; flex-direction: column; flex: 1;">
+                    <div style="flex: 1; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                      <img src="img/Capture.readme.png" alt="Capture d'écran - Readme" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="flex: 1; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
+                      <img src="img/Accuiel%20M2L.png" alt="Accueil M2L" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+          `
         }
       ];
 
       const nav = document.getElementById("card-navbar");
       const cardView = document.getElementById("card-view");
       const pageById = new Map();
+
+      // Création de 2 conteneurs (decks) pour séparer visuellement les cartes
+      const deck1 = document.createElement("div");
+      deck1.className = "card-deck";
+      const deck2 = document.createElement("div");
+      deck2.className = "card-deck";
 
       function renderView(page) {
         const hexToRgb = (hex) => {
@@ -522,9 +687,18 @@
           link.setAttribute("aria-current", "page");
         }
 
-        nav.appendChild(link);
+        // On place les 2 premières cartes dans le deck 1, et le reste (à partir de Patrimoine) dans le deck 2
+        if (pageById.size <= 2) {
+          deck1.appendChild(link);
+        } else {
+          deck2.appendChild(link);
+        }
       });
 
+      nav.appendChild(deck1);
+      nav.appendChild(deck2);
+
+      // On cible "tous" les liens où qu'ils soient
       nav.addEventListener("click", (event) => {
         const clickedCard = event.target.closest(".card-nav-item");
         if (!clickedCard) {

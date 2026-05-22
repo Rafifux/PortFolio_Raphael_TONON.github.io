@@ -1,0 +1,405 @@
+html {
+	font-size: 16px;
+	font-family: "Ubuntu", sans-serif;
+	line-height: 1.5;
+}
+
+body, p {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h2 {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 2em;
+	transition: 0.4s;
+}
+
+h2:hover {
+	background-color: #0000007e;
+	border-radius: 20px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #f8f9fa;
+	padding: 4px 0;
+	text-align: center;
+	border-top: 1px solid #e7e7e7;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	z-index: 5;
+}
+footer .container {
+
+	margin: 0 auto;
+}
+footer p {
+	margin: 0;
+	color: #6c757d;
+}
+footer ul{
+	list-style: none;
+	padding: 0;
+	margin: 5px 0 0;
+}
+footer ul li {
+	display: inline;
+	margin: 0 10px;
+	transition: 0.4s;
+}
+footer ul li:hover {
+	text-decoration: underline;
+}
+
+.flex-landing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5vh;
+	top: 15vh;
+	
+	position: relative;
+}
+.flex-grid {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 90vw;
+	gap: 10px;
+	
+}
+.flex-item {
+	background-size: cover;
+	background-position: 50%;
+	width: calc(50% - 10px);
+	border-radius: 20px;
+	height: 30vh;
+	cursor: pointer;
+}
+.flex-item:hover{
+	background-size: 170%;
+	background-repeat: no-repeat;
+}
+
+.flex-title {
+	width: 14%;
+	height: 4vh;
+	
+	position: absolute;
+	display: flex;
+	align-items: flex-start;
+	margin-left: 2%;
+	z-index: 1;
+	font-size: 3em;
+	color: #FF8C00; /* dusk orange */
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5), 8px 8px 4px rgba(0, 0, 0, 0.5), 12px 12px 8px rgba(0, 0, 0, 0.5); 
+	/* longer deep soft drop shadow with second offset shadow */
+}
+
+.flex-container {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	height: 5vh;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.flex-nav {
+	display: inline-flex;
+	padding: 1vw 3vw;
+	justify-content: center;
+	color: #000000;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: #4f4f4f80;
+	border: 2px solid #00000060;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	cursor: pointer;
+}
+
+
+.flex-nav-Column {
+	display: none;
+	position: inherit;
+	justify-self: center;
+	color: #000000;
+	width: 100%;
+}
+.flex-nav:hover .flex-nav-Column {
+	display: flow-root;
+}
+.flex-nav:hover {
+	color: #ffffff;
+}
+.flex-nav-Column:hover {
+	color: #ffffff;
+}
+.flex-menu {
+	border-bottom: 2px solid #000000;
+	width: 100%;
+	margin-top: 15vh;
+	z-index: 3;
+}
+.flex-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	align-items: flex-start;
+	padding-bottom: 10vh;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	z-index: 3;
+}
+#FAQ {
+	padding-left: 4vw;
+	padding-right: 4vw;
+}
+#Account {
+	padding-left: 4vw;
+	padding-right: 4vw;
+}
+.add-button {
+	padding: 10px 15px;
+	background-color: #888;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: 10px;
+	display: inline-flex;
+
+
+}
+.material-symbols-outlined {
+	font-variation-settings:
+		'FILL' 0,
+		'wght' 400,
+		'GRAD' 0,
+		'opsz' 24;
+}
+.flex-question {
+	  background-color: rgba(255, 255, 255, 0.6);
+	  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	  border-radius: 8px;
+	  display: flex;
+	  max-width: 75vw;
+	  margin: 10px;
+	  padding: 20px;
+  } 
+.question {
+	  font-weight: bold;
+	  font-size: .8em;
+  }
+.description, .reponse {
+	  background-color: rgba(225, 225, 225, 0.6);
+	  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	  border-radius: 8px;
+	  margin-left: 10px;
+	  font-weight: normal;
+	  font-style: italic;
+	  padding: 10px;
+  }
+.description {
+	  margin-top: 5px;
+  }
+.reponse {
+	  margin-top: 1vh;
+	  margin-left: 20px;
+  }
+.button-add {
+	  background-color: rgba(225, 225, 225, 0.6);
+	  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	  border-radius: 8px;
+	  padding: 5px;
+	  margin: 10px 0;
+	  font-size: 1em;
+	  display: block;
+  }
+.form-container {
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+.form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+.form-container button {
+            padding: 10px 15px;
+            background-color: #888;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }	
+.form-container button:hover {
+            background-color: #666;
+        }	
+.form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+.login-box {
+    max-width: 50vw;
+    min-width: 20vw;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    }
+.textbox {
+        margin-bottom: .25vh;
+    }
+.textbox label {
+    display: block;
+    margin-bottom: 5px;
+    }
+.textbox input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+.checkbox {
+        margin-bottom: 1vh;
+    }
+.button {
+        text-align: center;
+    }
+    .button button {
+        padding: 10px 20px;
+        background: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .button button:hover {
+    background: #555;
+    }
+.radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .radio-option {
+        display: flex;
+        align-items: center;
+        background-color: #dddddd; /* Grey for non-selected state */
+        border-radius: 4px;
+        margin-right: .5vw;
+        transition: background-color 0.2s;
+    }
+    .radio-option input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+    }
+    .radio-option:hover {
+        cursor: pointer;
+        background-color: #90cbee; /* Light blue on hover */
+    }
+    .radio-option:active {
+        background-color: #aaaaaa;
+    }
+    .radio-option label { /* Make the label take up the full space */
+        display: block;
+        width: 100%;
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+    .radio-option label:last-child {
+        margin-right: 0;
+    }
+    .radio-option input {
+        margin-right: 5px;
+    }
+    .radio-option input:checked + label {
+        color: white;
+    }
+    .radio-option:has(input:checked) {
+        background-color: #0066ff; /* Blue background when selected */
+    }
+
+.user-table{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 80vw;
+	margin-bottom: 5vh;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+
+}
+.user-table table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+.user-table th, .user-table td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+.user-table th {
+	background-color: #f2f2f2;
+}
+.user-table tr:hover {
+	background-color: #f5f5f5;
+}
+.user-table .btn-delete {
+	background-color: #ff4d4d;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.user-table .delete-button:hover {
+	background-color: #ff1a1a;
+}
+.user-table .btn-promote {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}

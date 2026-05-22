@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: rgba(250, 240, 202, 0.18);
+  border: 1px solid rgba(250, 240, 202, 0.55);
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+.toggle::before,
+.toggle::after
+{
+  content: '';
+  position: absolute;
+  left: 15px;
+  width: 30px;
+  height: 3px;
+  border-radius: 999px;
+  background: #fff;
+  transition: transform 0.25s ease, top 0.25s ease, box-shadow 0.25s ease;
+}
+.toggle::before
+{
+  top: 19px;
+  box-shadow: 0 10px 0 #fff;
+}
+.toggle::after
+{
+  top: 39px;
+}
+.toggle.active
+{
+  background-color: #EE964B;
+  cursor: pointer;
+  transform: rotate(0deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.toggle.active::before
+{
+  top: 29px;
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+.toggle.active::after
+{
+  top: 29px;
+  transform: rotate(-45deg);
+}
+.showcase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  background: #0D3B66;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active {
+  right: 300px;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAF0CA;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  text-align: justify;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #a862b3; 
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  text-align: center;
+  background-color: #FAF0CA;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #FAF0CA;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 24px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #EE964B;
+  letter-spacing: 6px;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #F95738;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  margin-top: 8%;
+  padding: 6px 12px;
+  padding-left: 2%;
+  background: #faf0cac7;
+}
+/* Style the acceuil content */
+.acccontent {
+  margin-top: 8.5%;
+  padding: 6px 12px;
+  background: #FAF0CA;
+}
+th,td{
+  padding: 15px;
+}
+ul > li {
+  margin-left: 15px;
+}
+h2{
+  text-align: center;
+}
+
+  /* Media Queries pour le Responsive Design */
+  @media screen and (max-width: 991px) {
+    header {
+      padding: 20px;
+    }
+    .showcase {
+      padding: 20px;
+      padding-top: 120px;
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+      align-items: flex-start;
+    }
+    .showcase.active {
+      right: 250px;
+    }
+    .menu {
+      width: 250px;
+    }
+  .toggle {
+    width: 50px;
+    height: 50px;
+  }
+  .toggle::before {
+    top: 15px;
+    width: 25px;
+  }
+  .toggle::after {
+    top: 31px;
+    width: 25px;
+  }
+  .toggle.active::before,
+  .toggle.active::after {
+    top: 23px;
+  }
+  .acccontent, .tabcontent {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+  }
+  .tab button {
+    font-size: 18px;
+    padding: 10px 5px;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+  }
+  th, td {
+    padding: 10px;
+  }
+  header img {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+  header .logo {
+    font-size: 1.2rem;
+  }
+  header img {
+    height: 60px;
+  }
+    .tab button {
+      font-size: 16px;
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .menu ul li a {
+      font-size: 20px;
+    }
+    .showcase.active {
+      right: 200px;
+    }
+    .menu {
+      width: 200px;
+    }
+  }

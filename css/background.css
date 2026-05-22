@@ -733,7 +733,7 @@ main {
 	justify-content: center;
 	min-height: 188px;
 	align-items: flex-end;
-	gap: 12px;
+	gap: 48px; /* Séparation des deux paquets */
 	padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
 	overflow-x: auto;
 	background: rgba(7, 18, 26, 0);
@@ -747,6 +747,16 @@ main {
 		background: rgba(137, 207, 232, 0.35);
 		border-radius: 999px;
 	}
+	.card-deck {
+		display: flex;
+		gap: 12px;
+		align-items: flex-end;
+	}
+	
+	.card-deck:nth-child(2) .card-nav-item + .card-nav-item {
+		margin-left: -110px; /* Vraiment plus serré pour le deck 2 */
+	}
+
 	.card-nav-item {
 		--card-accent: #56c0ff;
 		flex: 0 0 auto;
@@ -765,6 +775,7 @@ main {
 		& + .card-nav-item {
 			margin-left: -69px;
 		}
+
 		&:hover {
 			z-index: 8;
 			transform: translateY(-14px) scale(1.03) rotate(0deg);
@@ -1047,6 +1058,10 @@ main {
 	.card-navbar {
 		min-height: 170px;
 		transform: translateY(72px);
+		gap: 24px; /* Séparation ajustée en mobile */
+		.card-deck:nth-child(2) .card-nav-item + .card-nav-item {
+			margin-left: -95px; /* Vraiment plus serré en mobile */
+		}
 		.card-nav-item {
 			min-width: 120px;
 			height: 142px;

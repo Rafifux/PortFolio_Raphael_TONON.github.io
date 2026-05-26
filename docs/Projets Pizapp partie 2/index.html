@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PizApp Partie 2 - Statique</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="app-label">PizApp Client Java</p>
+        <h1>Version statique / quasi fonctionnelle</h1>
+      </div>
+      <div class="app-notice">Interface inspirée du client Java Swing original. Données locales, pas de base SQL.</div>
+    </header>
+
+    <section class="toolbar">
+      <button id="refreshButton" class="pill-button primary">Rafraîchir</button>
+      <button id="openDetailsButton" class="pill-button accent">Ouvrir les détails</button>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">Commandes récentes</div>
+      <div class="panel-subtitle">Cochez les commandes puis ouvrez les détails.</div>
+
+      <div class="table-container">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>#</th>
+              <th>Date</th>
+              <th>Client</th>
+              <th>Montant</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-panel">
+        <div class="modal-header">
+          <div>
+            <p class="modal-label">Détails de commande</p>
+            <h2 id="modalTitle">Commande #0</h2>
+          </div>
+          <button id="closeModal" class="icon-button">✕</button>
+        </div>
+
+        <div class="order-summary">
+          <div><span>Commande :</span> <strong id="detailOrderId">-</strong></div>
+          <div><span>Date :</span> <strong id="detailDate">-</strong></div>
+          <div><span>Client :</span> <strong id="detailClient">-</strong></div>
+          <div><span>Montant :</span> <strong id="detailAmount">-</strong></div>
+          <div><span>Statut :</span> <strong id="detailStatus">-</strong></div>
+        </div>
+
+        <div class="line-items">
+          <div class="panel-title">Lignes de commande</div>
+          <table id="linesTable">
+            <thead>
+              <tr>
+                <th>ID produit</th>
+                <th>Nom produit</th>
+                <th>Quantité</th>
+                <th>Total HT</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="modal-actions">
+          <button id="acceptButton" class="pill-button accent">Accepter</button>
+          <button id="refuseButton" class="pill-button danger">Refuser</button>
+          <button id="readyButton" class="pill-button success">Marquer prête</button>
+          <button id="detailRefreshButton" class="pill-button secondary">Rafraîchir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

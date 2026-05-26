@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage 1 Captusite - Statique</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Captusite Statique</h1>
+        <p>Simulation statique du tableau de bord de consommation.</p>
+      </div>
+      <nav>
+        <a href="#dashboard">Tableau de bord</a>
+        <a href="#table">Tableau des consommations</a>
+        <a href="#chart-day">Graphique journalier</a>
+        <a href="#chart-month">Graphique mensuel</a>
+        <a href="#chart-price">Graphique prix</a>
+      </nav>
+      <div class="note">
+        <strong>Note :</strong> Ce site est une version statique et de démonstration. Les données sont simulées côté client.
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Projets Stage 1</p>
+          <h2>Tableau de consommation Captusite</h2>
+          <p>Version statique du site de suivi de consommation électrique avec tableaux et graphiques.</p>
+        </div>
+      </header>
+
+      <section id="dashboard" class="card">
+        <h3>Tableau de bord</h3>
+        <div class="metrics-grid">
+          <article>
+            <span>30 j</span>
+            <strong>Consommation moyenne</strong>
+          </article>
+          <article>
+            <span>4,7 kWh</span>
+            <strong>Heure creuse moyenne</strong>
+          </article>
+          <article>
+            <span>6,3 kWh</span>
+            <strong>Heure pleine moyenne</strong>
+          </article>
+          <article>
+            <span>536,4 €</span>
+            <strong>Dépense estimée</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="table" class="card">
+        <div class="section-header">
+          <h3>Tableau des consommations</h3>
+          <div class="filters">
+            <label>Début <input type="date" id="dateStart" /></label>
+            <label>Fin <input type="date" id="dateEnd" /></label>
+            <button id="filterButton">Filtrer</button>
+            <button id="resetButton">Réinitialiser</button>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Jour</th>
+                <th>HC</th>
+                <th>HP</th>
+                <th>Temp. Moy.</th>
+                <th>Temp. App.</th>
+                <th>Pluie</th>
+              </tr>
+            </thead>
+            <tbody id="dataTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="chart-day" class="card">
+        <h3>Graphique de consommation journalière</h3>
+        <canvas id="dailyChart"></canvas>
+      </section>
+
+      <section id="chart-month" class="card">
+        <h3>Graphique de consommation mensuelle</h3>
+        <canvas id="monthlyChart"></canvas>
+      </section>
+
+      <section id="chart-price" class="card">
+        <h3>Graphique du prix de consommation</h3>
+        <canvas id="priceChart"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0/dist/chartjs-plugin-annotation.min.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

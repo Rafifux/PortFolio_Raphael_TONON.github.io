@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - AppResto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="slide-in-blurred-top">
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">Accueil</a>
+            <a href="connexion.html" class="nav-item">Connexion</a>
+            <a href="create-account.html" class="nav-item">Inscription</a>
+            <a href="productlist.html" class="nav-item active">Catalogue</a>
+        </div>
+        <div class="nav-brand" role="link" tabindex="0" onclick="location.href='index.html'" onkeypress="if(event.key==='Enter'){location.href='index.html';}">
+            <span class="nav-brand-title">AppResto</span>
+            <span class="nav-brand-tagline">Votre premier stop pour un creux</span>
+        </div>
+    </nav>
+
+    <div class="HeroCard" style="padding:1rem 0 2rem;">
+        <div class="LandingText">
+            <h1>Catalogue AppResto</h1>
+            <h3>Aperçu statique du menu</h3>
+        </div>
+        <div style="max-width:900px;margin:0 auto 1.5rem;padding:1rem;background:#f2f8f5;border:1px solid #c7e2d7;border-radius:18px;color:#17412f;text-align:center;">
+            Aperçu statique : le catalogue est visible, mais la connexion et la commande nécessitent le backend PHP/MySQL d'origine.
+        </div>
+        <div class="product-grid-sidebar-wrapper">
+            <div class="sidebar-bubble">
+                <button class="sidebar-btn active" data-filter="carte">Carte</button>
+                <button class="sidebar-btn" data-filter="pizza">Pizza</button>
+                <button class="sidebar-btn" data-filter="boissons">Boissons</button>
+                <button class="sidebar-btn" data-filter="desserts">Desserts</button>
+            </div>
+            <div class="product-grid">
+                <div class="product-card" data-product-type="Pizza">
+                    <div class="product-header">
+                        <span class="product-title">Margherita</span>
+                        <ul class="product-subhead-list">
+                            <li>Tomate, mozzarella, basilic</li>
+                            <li>Classique italienne</li>
+                        </ul>
+                    </div>
+                    <div class="product-image"><img src="img/pizza_margherita.jpg" alt="Pizza Margherita"></div>
+                    <div class="product-price">7.90€</div>
+                    <button class="add-to-cart" data-product-id="101" data-product-title="Pizza Margherita" data-product-price="7.90">Ajouter Au Panier</button>
+                </div>
+                <div class="product-card" data-product-type="Pizza">
+                    <div class="product-header">
+                        <span class="product-title">Pizza Reine</span>
+                        <ul class="product-subhead-list">
+                            <li>Jambon, champignons, olives</li>
+                            <li>Généreuse et gourmande</li>
+                        </ul>
+                    </div>
+                    <div class="product-image"><img src="img/pizza_reine.jpg" alt="Pizza Reine"></div>
+                    <div class="product-price">9.50€</div>
+                    <button class="add-to-cart" data-product-id="102" data-product-title="Pizza Reine" data-product-price="9.50">Ajouter Au Panier</button>
+                </div>
+                <div class="product-card" data-product-type="Pizza">
+                    <div class="product-header">
+                        <span class="product-title">Pizza Hawaïenne</span>
+                        <ul class="product-subhead-list">
+                            <li>Ananas, jambon, mozzarella</li>
+                            <li>Saveurs sucrées-salées</li>
+                        </ul>
+                    </div>
+                    <div class="product-image"><img src="img/pizza_hawaienne.jpg" alt="Pizza Hawaïenne"></div>
+                    <div class="product-price">10.20€</div>
+                    <button class="add-to-cart" data-product-id="103" data-product-title="Pizza Hawaïenne" data-product-price="10.20">Ajouter Au Panier</button>
+                </div>
+                <div class="product-card" data-product-type="Boissons">
+                    <div class="product-header">
+                        <span class="product-title">Coca-Cola</span>
+                        <ul class="product-subhead-list">
+                            <li>Canette 33cl</li>
+                            <li>Boisson fraîche</li>
+                        </ul>
+                    </div>
+                    <div class="product-image"><img src="img/boisson_coca-cola.jpg" alt="Boisson Coca-Cola"></div>
+                    <div class="product-price">2.50€</div>
+                    <button class="add-to-cart" data-product-id="201" data-product-title="Coca-Cola" data-product-price="2.50">Ajouter Au Panier</button>
+                </div>
+                <div class="product-card" data-product-type="Desserts">
+                    <div class="product-header">
+                        <span class="product-title">Tiramisu</span>
+                        <ul class="product-subhead-list">
+                            <li>Crème légère, café et cacao</li>
+                            <li>Dessert italien</li>
+                        </ul>
+                    </div>
+                    <div class="product-image"><img src="img/dessert_tiramisu_traditionnel_italien.jpg" alt="Tiramisu"></div>
+                    <div class="product-price">5.80€</div>
+                    <button class="add-to-cart" data-product-id="301" data-product-title="Tiramisu" data-product-price="5.80">Ajouter Au Panier</button>
+                </div>
+                <div class="product-card" data-product-type="Desserts">
+                    <div class="product-header">
+                        <span class="product-title">Crème brûlée</span>
+                        <ul class="product-subhead-list">
+                            <li>Vanille de Madagascar</li>
+                            <li>Texture onctueuse</li>
+                        </ul>
+                    </div>
+                    <div class="product-image"><img src="img/dessert_creme_brulee_a_la_vanille_de_madagascar.jpg" alt="Crème brûlée"></div>
+                    <div class="product-price">6.20€</div>
+                    <button class="add-to-cart" data-product-id="302" data-product-title="Crème brûlée" data-product-price="6.20">Ajouter Au Panier</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-toggle" aria-label="Ouvrir le panier" title="Panier">
+            <div class="cart-toggle-badge" id="cart-count-badge">0</div>
+            <div class="cart-toggle-icon">🧺</div>
+        </div>
+
+        <aside class="cart-panel" aria-hidden="true" aria-label="Panneau Panier">
+            <header class="cart-panel-header">
+                <h3>Votre panier</h3>
+                <button class="cart-close" aria-label="Fermer">✕</button>
+            </header>
+            <div class="cart-items" id="cart-items"></div>
+            <footer class="cart-panel-footer">
+                <div class="cart-total-row">
+                    <span>Total</span>
+                    <strong id="cart-total">0.00€</strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="cart-clear" id="cart-clear">Vider</button>
+                    <a class="checkout-btn" id="cart-checkout" href="#">Passer à la caisse</a>
+                </div>
+            </footer>
+        </aside>
+
+        <aside class="checkout-panel" aria-hidden="true" aria-label="Panneau Paiement">
+            <header class="cart-panel-header">
+                <h3>Paiement</h3>
+                <button class="checkout-close" aria-label="Fermer">✕</button>
+            </header>
+            <div class="checkout-content">
+                <div class="service-type">
+                    <label class="service-chip active" data-type="1">À emporter</label>
+                    <label class="service-chip" data-type="0">Sur place</label>
+                </div>
+                <form class="payment-form" id="payment-form" autocomplete="off">
+                    <div class="form-row">
+                        <label for="card-name">Nom sur la carte</label>
+                        <input type="text" id="card-name" name="cardName" placeholder="Jean Dupont" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="card-number">Numéro de carte</label>
+                        <input type="text" id="card-number" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-row two-cols">
+                        <div>
+                            <label for="card-exp">Expiration</label>
+                            <input type="text" id="card-exp" name="cardExp" maxlength="5" placeholder="MM/AA" required>
+                        </div>
+                        <div>
+                            <label for="card-cvv">CVV</label>
+                            <input type="password" id="card-cvv" name="cardCvv" maxlength="3" placeholder="***" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <footer class="cart-panel-footer">
+                <div class="cart-actions">
+                    <button class="cart-clear" id="checkout-back">Retour</button>
+                    <button class="checkout-btn" id="confirm-payment">Confirmer le paiement</button>
+                </div>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/product-filters.js"></script>
+</body>
+</html>

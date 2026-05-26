@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte - AppResto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="slide-in-blurred-top">
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">Accueil</a>
+            <a href="connexion.html" class="nav-item">Connexion</a>
+            <a href="create-account.html" class="nav-item active">Inscription</a>
+            <a href="productlist.html" class="nav-item">Catalogue</a>
+        </div>
+        <div class="nav-brand" role="link" tabindex="0" onclick="location.href='index.html'" onkeypress="if(event.key==='Enter'){location.href='index.html';}">
+            <span class="nav-brand-title">AppResto</span>
+            <span class="nav-brand-tagline">Votre premier stop pour un creux</span>
+        </div>
+    </nav>
+
+    <div class="HeroCard">
+        <div class="LandingText">
+            <h1>AppResto</h1>
+            <h3>Votre premier stop pour un creux</h3>
+        </div>
+        <div style="max-width:850px;margin:0 auto 1.5rem;padding:1rem;background:#eff7ff;border:1px solid #9ecff5;border-radius:18px;color:#173b6b;text-align:center;">
+            Aperçu statique : le formulaire d'inscription est visible pour la démo, mais la création de compte n'est pas active hors serveur PHP/MySQL.
+        </div>
+        <form class="connect-form" action="#" method="post">
+            <fieldset style="border:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:1rem">
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+                    <div class="input-box">
+                        <input type="text" name="nom" placeholder="Nom" required>
+                        <span class="input-icon">✕</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="prenom" placeholder="Prénom" required>
+                        <span class="input-icon">✕</span>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <span class="input-icon">✕</span>
+                </div>
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+                    <div class="input-box">
+                        <input type="password" name="password" placeholder="Mot de passe" required>
+                        <span class="input-icon">✕</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password2" placeholder="Vérifiez votre mot de passe" required>
+                        <span class="input-icon">✕</span>
+                    </div>
+                </div>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <button type="submit" class="primary-btn"><span class="btn-icon">★</span>Créer un compte</button>
+                    <button type="button" class="primary-btn" onclick="location.href='connexion.html'"><span class="btn-icon">★</span>Déjà inscrit ? Se connecter</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/form-helpers.js"></script>
+</body>
+</html>

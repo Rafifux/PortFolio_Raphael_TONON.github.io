@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppResto - Aperçu statique</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="slide-in-blurred-top">
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item active">Accueil</a>
+            <a href="connexion.html" class="nav-item">Connexion</a>
+            <a href="create-account.html" class="nav-item">Inscription</a>
+            <a href="productlist.html" class="nav-item">Catalogue</a>
+        </div>
+        <div class="nav-brand" role="link" tabindex="0" onclick="location.href='index.html'" onkeypress="if(event.key==='Enter'){location.href='index.html';}">
+            <span class="nav-brand-title">AppResto</span>
+            <span class="nav-brand-tagline">Votre premier stop pour un creux</span>
+        </div>
+    </nav>
+
+    <div class="HeroCard">
+        <div class="LandingText">
+            <h1>AppResto</h1>
+            <h3>Votre premier stop pour un creux</h3>
+        </div>
+        <div class="HeroActions">
+            <a class="nav-item" href="connexion.html" role="button" aria-label="Aller à la page de connexion"><span class="icon-circle"><img src="img/input_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>Connexion</a>
+            <a class="nav-item" href="create-account.html" role="button" aria-label="Créer un compte"><span class="icon-circle"><img src="img/group_add_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>Créer un compte</a>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

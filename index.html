@@ -11,8 +11,9 @@
       <section id="card-view" class="card-view" aria-live="polite"></section>
       
       <!-- Modale pour agrandir l'image -->
-      <div id="image-lightbox" style="display: none; position: fixed; z-index: 99999; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; cursor: pointer; backdrop-filter: blur(5px);" onclick="this.style.display='none'; document.getElementById('card-navbar').style.display='';">
+      <div id="image-lightbox" style="display: none; position: fixed; z-index: 99999; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; cursor: pointer; backdrop-filter: blur(5px);" onclick="this.style.display='none'; document.getElementById('lightbox-img').style.display='block'; if(document.getElementById('lightbox-pdf')) document.getElementById('lightbox-pdf').style.display='none'; document.getElementById('card-navbar').style.display='';">
         <img id="lightbox-img" src="" alt="Agrandissement" style="max-width: 90vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); object-fit: contain;">
+        <iframe id="lightbox-pdf" src="" style="display: none; width: 90vw; height: 90vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); border: none;"></iframe>
       </div>
     </main>
     <nav id="card-navbar" class="card-navbar" aria-label="Navigation des pages"></nav>
@@ -49,11 +50,11 @@
                 <div class="accueil-profil-cards" aria-label="Résumé de mon profil">
                   <section class="accueil-profil-card">
                     <h4>2</h4>
-                    <p>Projet(s) en cour(s) de réalisation(s)</p>
+                    <p>Projets en cours de réalisation</p>
                   </section>
                   <section class="accueil-profil-card">
                     <h4>4</h4>
-                    <p>Projets Réalisés</p>
+                    <p>Projets réalisés</p>
                   </section>
                   <section class="accueil-profil-card">
                     <h4>10+</h4>
@@ -70,7 +71,7 @@
                       <span class="accueil-step-dot" aria-hidden="true"></span>
                       <section class="accueil-step-card">
                         <h4>BTS SIO - Option SLAM</h4>
-                        <p>BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Metiers.</p>
+                        <p>BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers.</p>
                         <p>Institut Limayrac, Toulouse.</p>
                       </section>
                     </article>
@@ -80,16 +81,16 @@
                       <section class="accueil-step-card">
                         <h4>BAC STI2D - Option SIN</h4>
                         <p>Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable, spécialité Systèmes d'Information et Numérique.</p>
-                        <p>Lycee Charles de Gaulle, Muret.</p>
+                        <p>Lycée Charles de Gaulle, Muret.</p>
                       </section>
                     </article>
                     <article class="accueil-step">
                       <p class="accueil-step-date">sept 2019 - juin 2023</p>
                       <span class="accueil-step-dot" aria-hidden="true"></span>
                       <section class="accueil-step-card">
-                        <h4>College</h4>
+                        <h4>Collège</h4>
                         <p>Brevet des collèges.</p>
-                        <p>Collège François Verdier, Léguvin.</p>
+                        <p>Collège François Verdier, Léguevin.</p>
                       </section>
                     </article>
                   </div>
@@ -256,6 +257,97 @@
           `
         },
         {
+          id: "mes-projets",
+          label: "Mes Projets",
+          href: "#mes-projets",
+          rank: "P",
+          suit: "★",
+          accent: "#ffd166",
+          title: "Mes Projets",
+          description: "La galerie de mes différents projets réalisés.",
+          bullets: [],
+          customHtml: `
+            <article class="card-view-box">
+              <section aria-label="Galerie des projets">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                  
+                  <div class="partie-card" style="display: flex; flex-direction: column; cursor: pointer; padding: 0; overflow: hidden;" onclick="window.open('docs/Projets M2L/Index.html', '_blank')">
+                    <img src="img/Accuiel%20M2L.png" alt="Aperçu du site M2L" style="width: 100%; height: 140px; object-fit: cover; border-bottom: 2px solid rgba(158, 224, 248, 0.78);">
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+                      <h3 class="partie-title" style="color: #ffd166; margin: 0;">Maison des Ligues (M2L)</h3>
+                      <p class="partie-text" style="font-size: 0.9rem; margin: 0;">Site vitrine de la Maison des Ligues de Lorraine. Présentation des ligues et actualités.</p>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px;">
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">HTML/CSS</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">Javascript</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="partie-card" style="display: flex; flex-direction: column; cursor: pointer; padding: 0; overflow: hidden;" onclick="window.open('docs/Projets AppFAQ/index.html', '_blank')">
+                    <img src="docs/Projets AppFAQ/media/basket.jpg" alt="Tête du site AppFAQ" style="width: 100%; height: 140px; object-fit: cover; border-bottom: 2px solid rgba(158, 224, 248, 0.78);">
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+                      <h3 class="partie-title" style="color: #ffd166; margin: 0;">Réponso'Ligue (AppFAQ)</h3>
+                      <p class="partie-text" style="font-size: 0.9rem; margin: 0;">Application de foire aux questions pour la Maison des Ligues de Lorraine.</p>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px;">
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">HTML/CSS</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">PHP</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">SQL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="partie-card" style="display: flex; flex-direction: column; cursor: pointer; padding: 0; overflow: hidden;" onclick="window.open('docs/Projets%20Pizapp%20partie%201/index.html', '_blank')">
+                    <div style="position: relative; width: 100%; height: 140px; overflow: hidden; background: #111;">
+                      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.48)); pointer-events: none;"></div>
+                      <iframe src="docs/Projets%20Pizapp%20partie%201/index.html" style="position: absolute; top: 0; left: 0; width: 300%; height: 300%; transform: scale(0.3333); transform-origin: top left; border: none; pointer-events: none;" aria-hidden="true"></iframe>
+                    </div>
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+                      <h3 class="partie-title" style="color: #ffd166; margin: 0;">Site PizApp</h3>
+                      <p class="partie-text" style="font-size: 0.9rem; margin: 0;">Clique pour ouvrir la version statique exportée du dossier PizApp.</p>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px;">
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">HTML/CSS</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">PHP</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">SQL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="partie-card" style="display: flex; flex-direction: column; cursor: pointer; padding: 0; overflow: hidden;" onclick="window.open('docs/Projets%20Pizapp%20partie%202/index.html', '_blank')">
+                    <div style="position: relative; width: 100%; height: 140px; overflow: hidden; background: #111;">
+                      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.48)); pointer-events: none;"></div>
+                      <iframe src="docs/Projets%20Pizapp%20partie%202/index.html" style="position: absolute; top: 0; left: 0; width: 300%; height: 300%; transform: scale(0.3333); transform-origin: top left; border: none; pointer-events: none;" aria-hidden="true"></iframe>
+                    </div>
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+                      <h3 class="partie-title" style="color: #ffd166; margin: 0;">Applications Java Pizapp</h3>
+                      <p class="partie-text" style="font-size: 0.9rem; margin: 0;">Version statique du client Java de PizApp, avec interface de commande et gestion des statuts.</p>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px;">
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">Java</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="partie-card" style="display: flex; flex-direction: column; cursor: pointer; padding: 0; overflow: hidden;" onclick="window.open('docs/Projets%20Stage%201/index.html', '_blank')">
+                    <div style="position: relative; width: 100%; height: 140px; overflow: hidden; background: #0f1720;">
+                      <iframe src="docs/Projets%20Stage%201/index.html" style="position: absolute; top: 0; left: 0; width: 320%; height: 420px; transform: scale(0.34); transform-origin: top left; border: none; pointer-events: none;" aria-hidden="true"></iframe>
+                      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.28));"></div>
+                    </div>
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+                      <h3 class="partie-title" style="color: #ffd166; margin: 0;">Projet Stage 1</h3>
+                      <p class="partie-text" style="font-size: 0.9rem; margin: 0;">Export statique du site Captusite. Présentation de l’espace projet et du suivi de production.</p>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 10px;">
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">HTML/CSS</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">JS</span>
+                        <span style="font-size: 0.75rem; padding: 4px 10px; background: rgba(255, 209, 102, 0.15); border: 1px solid rgba(255, 209, 102, 0.3); border-radius: 6px; color: #ffd166;">Static</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+            </article>
+          `
+        },
+        {
           id: "patrimoine-informatique",
           label: "Gestion du patrimoine informatique",
           href: "#patrimoine-informatique",
@@ -265,7 +357,7 @@
           title: "Gestion du patrimoine informatique",
           description: "La gestion du patrimoine informatique consiste à recenser, suivre, maintenir et faire évoluer l’ensemble des ressources informatiques d’une organisation afin de garantir leur bon fonctionnement et leur adéquation avec les besoins des utilisateurs.",
           bullets: [
-            "J'ai appris a mettre cela en place avec l'aide d'un TP GLPI vu en classe",
+            "J'ai appris à mettre cela en place avec l'aide d'un TP GLPI vu en classe.",
             "Mise en pratique de l'inventaire, du suivi et de la maintenance des ressources informatiques."
           ],
           customHtml: `
@@ -368,7 +460,7 @@
           title: "Développer la présence en ligne de l’organisation",
           description: "Renforcer la présence en ligne d’une organisation, c’est créer, administrer et optimiser ses supports digitaux (site web, réseaux sociaux, applications, etc.) pour accroître sa visibilité, son accessibilité et son impact sur Internet.",
           bullets: [
-            "J'ai appris a faire cela avec un des projets fais en classe se nommant M2L. Je me suis occupé pour ma part de la partie ligue de rugby car le but du projet était de faire un site regroupant plusieur ligue de sport."
+            "J'ai appris à faire cela avec un des projets faits en classe se nommant M2L. Je me suis occupé pour ma part de la ligue de rugby, car le but du projet était de faire un site regroupant plusieurs ligues de sport."
           ],
           customHtml: `
             <article class="card-view-box competences-view presence-view">
@@ -490,7 +582,7 @@
           title: "Mettre à disposition des utilisateurs un service informatique",
           description: "Mettre en place et maintenir des services numériques, c’est concevoir, déployer et garantir le bon fonctionnement des éléments clés d’une infrastructure digitale : sites web, services de sauvegarde, hébergement, gestion des noms de domaine, sécurisation des accès et optimisation des réseaux. Cette démarche vise à assurer la disponibilité, la sécurité et la performance des outils en ligne, afin de répondre efficacement aux besoins des utilisateurs et de soutenir les activités de l’organisation.",
           bullets: [
-            "J'appris a développer en en étant a l'écoute de mon tuteur pour faire l'évolution du site qui ma demande."
+            "J'ai appris à développer en étant à l'écoute de mon tuteur pour faire l'évolution du site qu'il m'a demandée."
           ],
           customHtml: `
             <article class="card-view-box competences-view service-view">
@@ -548,7 +640,7 @@
         },
         {
           id: "Organiser son développement professionnel",
-          label: "Dev pro",
+          label: "Organiser son développement professionnel",
           href: "#Organiser son développement professionnel",
           rank: "D",
           suit: "\u2665",
@@ -573,14 +665,14 @@
                 
                 <!-- Colonne 1 : Explications (1/3 de la largeur) -->
                 <section class="partie-card tools-card" style="flex: 1; min-width: 240px; margin: 0; display: flex; flex-direction: column;">
-                  <h3 class="partie-title frameworks-title"><span aria-hidden="true">&#128221;</span>Veille et perspective</h3>
+                  <h3 class="partie-title frameworks-title"><span aria-hidden="true">&#128221;</span>Veille et Expérience</h3>
                   <p class="partie-text" style="font-style: italic; margin-bottom: 12px; color: var(--page-accent);">
-                    « Rester informé des nouveautés de l'industrie informatique. »
+                    « Apprendre, s'informer et appliquer sur le terrain. »
                   </p>
                   <ul class="card-view-list" style="margin-top: 8px;">
-                    <li><strong>Sources :</strong> Médias tech, blogs.</li>
-                    <li><strong>Objectif :</strong> Anticiper les technos.</li>
-                    <li><strong>Application :</strong> Tests et labos perso.</li>
+                    <li><strong>Auto-formation :</strong> Apprentissage continu et validations d'acquis (ex: W3Schools).</li>
+                    <li><strong>Veille technologique :</strong> Suivi et analyse des grandes tendances (ex: Revue IA).</li>
+                    <li><strong>Pratique pro :</strong> Mise en application des compétences via les expériences de stage.</li>
                   </ul>
                 </section>
 
@@ -592,11 +684,11 @@
                   </div>
                   <!-- Photos 2 & 3 - Empilées à droite -->
                   <div style="display: flex; flex-direction: column; flex: 1;">
-                    <div style="flex: 1; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
-                      <img src="img/Capture.readme.png" alt="Capture d'écran - Readme" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div style="flex: 1; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); cursor: pointer; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').style.display='none'; document.getElementById('lightbox-pdf').style.display='block'; document.getElementById('lightbox-pdf').src='docs/revue_ia_mai2026_compact.pdf'; document.getElementById('card-navbar').style.display='none';">
+                      <iframe src="docs/revue_ia_mai2026_compact.pdf#toolbar=0&navpanes=0&scrollbar=0" style="width: 100%; height: 100%; border: none; pointer-events: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="Aperçu du PDF Revue IA"></iframe>
                     </div>
-                    <div style="flex: 1; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.querySelector('img').src; document.getElementById('card-navbar').style.display='none';">
-                      <img src="img/Accuiel%20M2L.png" alt="Accueil M2L" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <div style="flex: 1; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden;" onclick="document.getElementById('image-lightbox').style.display='flex'; document.getElementById('lightbox-img').style.display='none'; document.getElementById('lightbox-pdf').style.display='block'; document.getElementById('lightbox-pdf').src='docs/resume_stage_TONON.pdf'; document.getElementById('card-navbar').style.display='none';">
+                      <iframe src="docs/resume_stage_TONON.pdf#toolbar=0&navpanes=0&scrollbar=0" style="width: 100%; height: 100%; border: none; pointer-events: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="Aperçu du PDF Résumé de stage"></iframe>
                     </div>
                   </div>
                 </section>
@@ -687,8 +779,8 @@
           link.setAttribute("aria-current", "page");
         }
 
-        // On place les 2 premières cartes dans le deck 1, et le reste (à partir de Patrimoine) dans le deck 2
-        if (pageById.size <= 2) {
+        // On place les 3 premières cartes dans le deck 1, et le reste dans le deck 2
+        if (pageById.size <= 3) {
           deck1.appendChild(link);
         } else {
           deck2.appendChild(link);
